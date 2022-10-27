@@ -1,0 +1,197 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 16px;
+}
+
+:root {
+    --fw-regular: 400;
+    --fw-light: 300;
+    --fw-bold: 600;
+
+    --clr-primary: hsl(0, 36%, 70%);
+    --clr-primary-soft: hsl(0, 93%, 68%);
+    --clr-dark: hsl(0, 6%, 24%);
+}
+
+h1{
+    letter-spacing: 1rem;
+    text-transform: uppercase;
+    font-weight: var(--fw-bold);
+    font-size: 3rem;
+}
+
+h1 span {
+    color: var(--clr-primary);
+    font-weight: var(--fw-light);
+    font-size: 3rem;
+}
+
+p {
+    color: var(--clr-primary);
+    line-height: 1.5rem;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.main-left {
+    background-image: url(images/bg-pattern-desktop.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.container {
+    width: 55%;
+    margin: 0 auto;
+}
+
+
+.logo {
+    margin-top: 10vh;
+}
+
+.main-image {
+    display: none;
+
+}
+.title {
+    margin-top: 10vh;
+    margin-bottom: 1.5rem;
+}
+
+.subtitle {
+    margin-bottom: 2.5rem;
+}
+
+form {
+    width: 100%;
+    position: relative;
+    margin-bottom: 100px;
+}
+
+input {
+    width: 90%;
+    padding-left: 30px;
+    height: 50px;
+    border: 0.5px solid var(--clr-primary);
+    outline: none;
+    border-radius: 30px;
+    display: inline-block;
+}
+
+::placeholder {
+    color: var(--clr-primary);
+    opacity: 0.7;
+}
+
+.error-icon {
+    position: absolute;
+    padding: 12px;
+    right: 120px;
+    display: none;
+}
+
+button {
+    position: absolute;
+    display: inline-block;
+    outline: none;
+    width: 90px;
+    height: 50px;
+    border-radius: 30px;
+    border: none;
+    background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    box-shadow: 5px 10px 30px rgba(236, 187, 187, 0.8);
+    color: #fff;
+    font-size: 25px;
+    font-weight: var(--fw-light);
+    right: 30px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: linear-gradient(135deg, rgb(245, 219, 219), hsl(0, 100%, 88%));
+    transition: 0.6s;
+    box-shadow: 5px 10px 30px rgba(236, 187, 187, 0.8);
+}
+
+.error-message {
+    margin-top: 10px;
+    margin-left: 30px;
+    display: none;
+}
+
+.error .error-icon {
+    display: inline-block;
+}
+
+.error .error-message {
+    display: inline-block;
+}
+
+.main-right {
+    background-image: url(images/hero-desktop.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+@media (max-width:950px) {
+    main {
+        display: block;
+        max-width: 950px;
+        height: auto;
+    }
+    .main-left {
+        background-image: none;
+    }
+    .container {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .logo {
+        margin-left: 10%;
+        margin-bottom: 1.4rem;
+    }
+
+    .main-image {
+        display: block;
+        width: 375px;
+       margin-left: auto;
+       margin-right: auto;
+    }
+
+    .title,
+    .subtitle,
+    form {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    .error {
+        right: 75px;;
+    }
+
+    button {
+        width: 70px;
+        right: 10px;
+    }
+
+    .error-message {
+        margin-top: 10px;
+        text-align: left;
+        margin-left: 40px;
+    }
+
+    .main-right {
+        display: none;
+    }
+}
